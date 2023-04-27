@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="stylesheets/styles.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="scripts/scripts.js"></script>
+
+    <title>SOI Learning Portal</title>
+    <style>
+
+    </style>
+
+</head>
+
+
+<header>
+    <div class="alert alert-success" id="success-alert">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong>Bookmark Added!</strong>
+      </div>
+
+    <!-- 
+        *************
+        1. navbar
+        *************
+     -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success bg-gradient w-100">
+        <div class="container-fluid">
+            <!-- navbar logo -->
+            <a class="navbar-brand" href="assignment.html">
+                <img class="nav-logo" src="images/soi-logo.jpeg" alt="Hero IMG" width="50">
+                Learning Portal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <!-- navbar items -->
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Courses
+                        </a>
+                        <ul class="dropdown-menu bg-success" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item text-white" href="#">HTML</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="#">CSS</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="#">PHP</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="#">Javascript</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="#">Python</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="#">Java</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="#">iOS</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="#">React</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+
+
+                    <!-- searchbar -->
+                    <form class="d-flex">
+                        <input id="searchbar" class="form-control me-2 btn-outline-dark" type="search"
+                            placeholder="Search" aria-label="Search">
+                        <button class="btn btn-dark btn-outline-dark text-white" type="submit">Search</button>
+                    </form>
+                </ul>
+
+
+                <div class="icon-dropdown dropdown">
+                        <i class="dropdown fas fa-bell me-3 mt-2" type="button" 
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <ul class="dropdown-menu dropdown-menu-start bg-success" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">
+                        <a href="#!" class="text-white text-decoration-none"><i class="fas fa-envelope ps-3 pe-2"></i>Unread</a>
+                      </a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                      <li><a class="dropdown-item" href="#">
+                        <a href="#!" class="text-white text-decoration-none"><i class="fas fa-envelope-open ps-3 pe-2"></i>Read</a>
+                    </a></li>
+                    </ul>
+                  </div>
+
+                <img src="images/avatar.jpeg" class="nav-user" alt="...">
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+
+    <!-- 
+        *************
+        2. hero
+        *************
+     -->
+
+    <div class="hero-bg container-fluid bg-dark bg-gradient">
+
+            <video playsinline autoplay muted loop poster="cake.jpg">
+              <source src="videos/video.mp4" type="video/webm">
+              Your browser does not support the video tag.
+            </video>
+
+        <div class="row flex-lg-row-reverse py-5 justify-content-center">
+
+            <div class="col-10 col-sm-8 col-lg-7 text-center">
+                <img src="images/hero-img.png" class="hero-img img-fluid mb-5" alt="Hero IMG" width="700" height="500"
+                    loading="lazy">
+            </div>
+
+            <div class="col-lg-4 d-flex flex-column justify-content-center">
+
+                <h1 class="hero-txt1 text-white text-lg-start text-center display-5 fw-bold lh-1 mb-3">Welcome to</h1>
+                <h1 class="hero-txt2 text-success text-lg-start text-center display-5 fw-bold lh-1 mb-3">SOI Learning Portal</h1>
+
+                <p class="lead text-white text-wrap text-lg-start text-center">Expertly crafted courses that best fit
+                    your learning needs and
+                    preferences </p>
+
+                <div class="d-grid d-lg-flex gap-2 justify-content-lg-start">
+                    <button type="button" class="btn btn-success btn-lg px-4 me-md-2">Browse Course</button>
+                    <button type="button" class="btn btn-outline-success btn-lg px-4">Be An Instructor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 
+        *************
+        3. 3-column section
+        *************
+     -->
+
+    <div class="container-fluid bg-success">
+        <div class="row justify-content-center">
+
+            <div class="col-lg-3 col-md-12 d-flex justify-content-center pt-4 pb-4 bg-light">
+                <div class="three-c-icon lex-shrink-0 me-3">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div>
+                    <p class="text-success fw-bold m-0 fs-5">158 Online Courses</p>
+                    <p class="m-0 fs-6">Enjoy a variety of fresh topics</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-12 d-flex justify-content-center pt-4 pb-4 bg-success text-white">
+                <div class="three-c-icon lex-shrink-0 me-3">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+                <div>
+                    <p class="text-dark fw-bold m-0 fs-5">Expert instruction</p>
+                    <p class="m-0 fs-6">Find the right instructor for you</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-12 d-flex justify-content-center pt-4 pb-4 bg-secondary">
+                <div class="three-c-icon lex-shrink-0 me-3">
+                    <i class="fas fa-history"></i>
+                </div>
+                <div>
+                    <p class="text-white fw-bold m-0 fs-5">Lifetime access</p>
+                    <p class="text-black m-0 fs-6">Learn on your schedule</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- 
+        *************
+        4. cards
+        *************
+     -->
+
+
+    <div class="album py-5 bg-dark">
+        <div class="container">
+            <h2 class="pb-4 border-bottom text-success">Feature Courses</h2>
+
+            <!-- row 1 -->
+            <div class="row pt-5">
+                <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            
+                            <div class="ass-card">
+                                <div class="card h-100 bg-dark">
+                                    <div><img src="images/ass-card-img4.jpeg" class="img-wrapper" alt="..."></div>
+                                    <div class="card-body text-white bg-dark">
+                                        <h5 class="card-title">Introduction to HTML and CSS</h5>
+                                        <p class="card-text">
+                                            <i class="far fa-clock"></i> 2h 30m
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center bg-white text-success">
+                                        <i class="card-avatar-txt"><img class="card-avatar-img"
+                                                src="images/avatar1.jpeg" alt="...">Hannah Lim</i>
+                                        <div> <i role="button" class="fas fa-bookmark" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
+                                                title="Add to Bookmarks"></i>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="ass-card">
+                                <div class="card h-100 bg-dark">
+                                    <div><img src="images/ass-card-img1.png" class="img-wrapper" alt="..."></div>
+                                    <div class="card-body text-white bg-dark">
+                                        <h5 class="card-title">User Experience and Interface Design</h5>
+                                        <p class="card-text">
+                                            <i class="far fa-clock"></i> 2h 45m
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center bg-white text-success">
+                                        <i class="card-avatar-txt"><img class="card-avatar-img"
+                                                src="images/avatar2.jpeg" alt="...">Julia Lee</i>
+                                        <div> <i role="button" class="fas fa-bookmark" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
+                                                title="Add to Bookmarks"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="ass-card">
+                                <div class="card h-100 bg-dark">
+                                    <div><img src="images/card-img3.jpeg" class="img-wrapper" alt="..."></div>
+                                    <div class="card-body text-white bg-dark">
+                                        <h5 class="card-title">iOS App Development using Xcode and Swift</h5>
+                                        <p class="card-text">
+                                            <i class="far fa-clock"></i> 4h 30m
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center bg-white text-success">
+                                        <i class="card-avatar-txt"><img class="card-avatar-img"
+                                                src="images/avatar3.jpeg" alt="...">Ryan Low</i>
+                                        <div> <i role="button" class="fas fa-bookmark" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
+                                                title="Add to Bookmarks"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="ass-card">
+                                <div class="card h-100 bg-dark">
+                                    <div><img src="images/ass-card-img3.jpeg" class="img-wrapper" alt="..."></div>
+                                    <div class="card-body text-white bg-dark">
+                                        <h5 class="card-title">Front-end JavaScript Frameworks</h5>
+                                        <p class="card-text">
+                                            <i class="far fa-clock"></i> 3h 45m
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center bg-white text-success">
+                                        <i class="card-avatar-txt"><img class="card-avatar-img"
+                                                src="images/avatar4.jpeg" alt="...">Azhar Kamar</i>
+                                        <div> <i role="button" class="fas fa-bookmark" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
+                                                title="Add to Bookmarks"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="ass-card">
+                                <div class="card h-100 bg-dark">
+                                    <div><img src="images/card-img5.png" class="img-wrapper" alt="..."></div>
+                                    <div class="card-body text-white bg-dark">
+                                        <h5 class="card-title">Machine-learning using Python</h5>
+                                        <p class="card-text">
+                                            <i class="far fa-clock"></i> 6h 45m
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center bg-white text-success">
+                                        <i class="card-avatar-txt"><img class="card-avatar-img"
+                                                src="images/avatar3.jpeg" alt="...">Ryan Low</i>
+                                        <div> <i role="button" class="fas fa-bookmark" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
+                                                title="Add to Bookmarks"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="ass-card">
+                                <div class="card h-100 bg-dark">
+                                    <div><img src="images/card-img6.png" class="img-wrapper" alt="..."></div>
+                                    <div class="card-body text-white bg-dark">
+                                        <h5 class="card-title">Object-oriented Programming with Java</h5>
+                                        <p class="card-text">
+                                            <i class="far fa-clock"></i> 3h 45m
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center bg-white text-success">
+                                        <i class="card-avatar-txt"><img class="card-avatar-img"
+                                                src="images/avatar4.jpeg" alt="...">Azhar Kamar</i>
+                                        <div> <i role="button" class="fas fa-bookmark" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
+                                                title="Add to Bookmarks"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="ass-card">
+                                <div class="card h-100 bg-dark">
+                                    <div><img src="images/card-img7.jpeg" class="img-wrapper" alt="..."></div>
+                                    <div class="card-body text-white bg-dark">
+                                        <h5 class="card-title">Advance CSS Webdesign</h5>
+                                        <p class="card-text">
+                                            <i class="far fa-clock"></i> 1h 30m
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center bg-white text-success">
+                                        <i class="card-avatar-txt"><img class="card-avatar-img"
+                                                src="images/avatar1.jpeg" alt="...">Hannah Lim</i>
+                                        <div> <i role="button" class="fas fa-bookmark" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
+                                                title="Add to Bookmarks"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="ass-card">
+                                <div class="card h-100 bg-dark">
+                                    <div><img src="images/card-img8.png" class="img-wrapper" alt="..."></div>
+                                    <div class="card-body text-white bg-dark">
+                                        <h5 class="card-title">React.js Framework</h5>
+                                        <p class="card-text">
+                                            <i class="far fa-clock"></i> 2h 25m
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="card-body d-flex justify-content-between align-items-center bg-white text-success">
+                                        <i class="card-avatar-txt"><img class="card-avatar-img"
+                                                src="images/avatar5.jpeg" alt="...">Jean Lim</i>
+                                        <div> <i role="button" class="fas fa-bookmark" data-bs-toggle="offcanvas"
+                                                data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom"
+                                                title="Add to Bookmarks"></i>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- 
+        *************
+        5. footer
+        *************
+     -->
+
+    <footer class="bg-success text-center text-lg-start text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row my-4">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+
+                    <div class="shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
+                        style="width: 150px; height: 150px;">
+                        <img class="footer-img" src="images/soi-logo.jpeg" height="130" height="130" alt=""
+                            loading="lazy" />
+                    </div>
+
+                    <p class="text-center">Expertly crafted courses that best fit your learning needs and preferences
+                    </p>
+
+                    <ul class="list-unstyled d-flex flex-row justify-content-center">
+                        <li>
+                            <a class="text-white px-2" href="#!">
+                                <i class="fab fa-facebook-f" id="fb-logo"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white px-2" href="#!">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white ps-2" href="#!">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white ps-2" href="#!">
+                                <i class="fab fa-google"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-white ps-2" href="#!">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase fs-4 mb-4">Navigations</h5>
+
+                    <ul class="list-unstyled text-decoration-none fs-5">
+                        <li class="mb-2 text-decoration-none">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>Home</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>About</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>Courses</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>Contact Us</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>Notifications</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>Account</a>
+                        </li>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase fs-4 mb-4">Courses</h5>
+
+                    <ul class="list-unstyled text-decoration-none fs-5">
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>HTML</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>CSS</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>PHP</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>Javascript</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>Python</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>Java</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>iOS</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#!" class="text-white text-decoration-none"><i class="fas fa-power-off pe-2"></i>React</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Contact</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p><i class="fas fa-map-marker-alt pe-2"></i>9 Woodlands Ave 9, Singapore 738964</p>
+                        </li>
+                        <li>
+                            <p><i class="fas fa-phone pe-2"></i>6510 3000</p>
+                        </li>
+                        <li>
+                            <p><i class="fas fa-envelope pe-2 mb-0"></i>askRP@rp.edu.sg</p>
+                        </li>
+
+                        <li>
+                            <form>
+                                <h5>Subscribe to our newsletter</h5>
+                                <p>Monthly digest of whats new and exciting from us.</p>
+                                <div class="d-flex w-100 gap-2">
+                                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                                    <input id="newsletter1" type="text" class="form-control"
+                                        placeholder="Email address">
+                                    <button class="btn btn-success btn-outline-dark" type="button">Subscribe</button>
+                                </div>
+                            </form>
+                        </li>
+
+                    </ul>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+
+        <!-- Copyright -->
+        <div class="d-flex justify-content-between py-4 border-top text-white">
+            <p class="col-md-5 mb-6 ms-5">&copy; 2022 SOI Learning Portal. All rights reserved.</p>
+            <!-- <ul class="list-unstyled d-flex">
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+              <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+            </ul> -->
+            <ul class="nav col-md-5 justify-content-end text-white me-5">
+                <!-- Bottom -->
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Privacy</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Terms</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Feedback</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Support</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div class="offcanvas offcanvas-bottom bg-dark" data-bs-scroll="true" tabindex="-1" id="offcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasBottomLabel">Bookmarks</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="container pt-1">
+                <div class="bookmark-box"></div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+</html>
